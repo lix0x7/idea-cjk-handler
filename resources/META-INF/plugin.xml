@@ -1,0 +1,48 @@
+<idea-plugin>
+  <id>main.java.lix7.ideacjkhandler</id>
+  <name>idea-cjk-handler</name>
+  <version>1.0</version>
+  <vendor email="lix7@lix7.com" url="http://www.lix7.com">lix7</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="testId" class="main.java.com.lix7.action.TestAction" text="TestAction" description="测试一下">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+
+    <!-- actual actions  -->
+    <action id="main.java.com.lix7.action.NextCjkWordAction" class="main.java.com.lix7.action.NextCjkWordAction"
+            text="Move Caret to Next CJK Word" description="Move caret to next CJK word"/>
+    <action id="main.java.com.lix7.action.NextCjkWordWithSelectionAction"
+            class="main.java.com.lix7.action.NextCjkWordWithSelectionAction" text="Move Caret to Next CJK Word"
+            description="Move caret to next CJK word"/>
+    <action id="main.java.com.lix7.action.PrevCjkWordAction" class="main.java.com.lix7.action.PrevCjkWordAction"
+            text="Move Caret to Prev CJK Word" description="Move caret to prev CJK word"/>
+    <action id="main.java.com.lix7.action.PrevCjkWordWithSelectionAction"
+            class="main.java.com.lix7.action.PrevCjkWordWithSelectionAction"
+            text="Move Caret to Prev CJK Word with Selection" description="Move caret to prev CJK word with selection"/>
+  </actions>
+
+</idea-plugin>
