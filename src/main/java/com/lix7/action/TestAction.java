@@ -15,18 +15,13 @@ import com.intellij.openapi.editor.LogicalPosition;
 import com.intellij.openapi.editor.VisualPosition;
 import com.intellij.openapi.editor.actionSystem.EditorActionManager;
 import com.intellij.openapi.editor.actionSystem.TypedAction;
-import com.intellij.openapi.editor.actions.MoveCaretLeftAction;
-import com.intellij.openapi.ui.MessageType;
 import com.intellij.openapi.ui.Messages;
-import main.java.com.lix7.typedhandler.TestTypedHandler;
-import org.apache.log4j.varia.FallbackErrorHandler;
 
 public class TestAction extends AnAction {
 
     static {
         EditorActionManager actionManager = EditorActionManager.getInstance();
         TypedAction typedAction = actionManager.getTypedAction();
-        typedAction.setupHandler(new TestTypedHandler());
     }
 
     @Override

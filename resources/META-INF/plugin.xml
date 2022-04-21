@@ -36,8 +36,8 @@
     <action id="main.java.com.lix7.action.NextCjkWordAction" class="main.java.com.lix7.action.NextCjkWordAction"
             text="Move Caret to Next CJK Word" description="Move caret to next CJK word"/>
     <action id="main.java.com.lix7.action.NextCjkWordWithSelectionAction"
-            class="main.java.com.lix7.action.NextCjkWordWithSelectionAction" text="Move Caret to Next CJK Word"
-            description="Move caret to next CJK word"/>
+            class="main.java.com.lix7.action.NextCjkWordWithSelectionAction" text="Move Caret to Next CJK Word with Selection"
+            description="Move caret to next CJK word with Selection"/>
     <action id="main.java.com.lix7.action.PrevCjkWordAction" class="main.java.com.lix7.action.PrevCjkWordAction"
             text="Move Caret to Prev CJK Word" description="Move caret to prev CJK word"/>
     <action id="main.java.com.lix7.action.PrevCjkWordWithSelectionAction"

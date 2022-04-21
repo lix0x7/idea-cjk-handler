@@ -43,7 +43,13 @@ class NextPrevCjkWordHandler extends EditorActionHandler.ForEachCaret {
             }
             else {
                 // when the line is in cjk mode, the direction must be left to right
-                CjkEditorActionUtil.moveCaretToNextWord(editor, myWithSelection, myInDifferentHumpsMode ^ editor.getSettings().isCamelWords());
+                // so here we just need to consider myNext
+                if (myNext ^ caret.isAtRtlLocation()) {
+                    EditorActionUtil.moveCaretToNextWord(editor, myWithSelection, myInDifferentHumpsMode ^ editor.getSettings().isCamelWords());
+                }
+                else {
+                    EditorActionUtil.moveCaretToPreviousWord(editor, myWithSelection, myInDifferentHumpsMode ^ editor.getSettings().isCamelWords());
+                }
             }
         }
     }
